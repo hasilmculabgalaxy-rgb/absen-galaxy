@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Absensi & Cuti - Full App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <style>body{background:#f8fafc}</style>
+</head>
+<body class="min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-2xl bg-white rounded-xl shadow p-6">
+    <h1 class="text-2xl font-bold mb-4">Absensi & Cuti — Full App</h1>
+
+    <div id="auth-area">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Email</label>
+          <input id="email" class="border p-2 rounded w-full" placeholder="you@example.com" />
+          <label class="block text-sm font-medium mt-3">Password</label>
+          <input id="password" type="password" class="border p-2 rounded w-full" placeholder="password" />
+          <div class="flex gap-2 mt-4">
+            <button id="btn-register" class="bg-green-600 text-white px-4 py-2 rounded">Register</button>
+            <button id="btn-login" class="bg-blue-600 text-white px-4 py-2 rounded">Login</button>
+          </div>
+          <p class="text-xs text-gray-500 mt-3">Note: Register membuat akun dengan role <b>employee</b>. Untuk HRD/Admin buat manual lewat Supabase atau panel Admin.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Quick start</h3>
+          <ol class="list-decimal pl-5 text-sm text-gray-700">
+            <li>Pastikan Supabase sudah di-setup (tables & RLS) sesuai README.</li>
+            <li>Create storage bucket <code>photos</code> untuk selfie/dokumen.</li>
+            <li>Deploy folder ini ke Vercel / Netlify (static site).</li>
+          </ol>
+          <div class="mt-4">
+            <button id="btn-open-readme" class="px-3 py-2 bg-gray-200 rounded">Open README</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>

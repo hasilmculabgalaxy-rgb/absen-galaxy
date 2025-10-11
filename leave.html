@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cuti & Izin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <header class="bg-white p-3 shadow flex items-center justify-between">
+    <a href="dashboard.html" class="text-blue-600">← Kembali</a>
+    <div><button id="btn-logout" class="bg-red-500 text-white px-3 py-1 rounded">Logout</button></div>
+  </header>
+
+  <main class="p-4 max-w-3xl mx-auto">
+    <div class="bg-white p-4 rounded shadow">
+      <h2 class="font-semibold">Ajukan Cuti / Izin</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mt-2">
+        <select id="leave-type" class="border p-2"><option value="sick">Sakit</option><option value="annual">Cuti Tahunan</option><option value="special">Izin Khusus</option></select>
+        <input id="leave-start" type="date" class="border p-2">
+        <input id="leave-end" type="date" class="border p-2">
+      </div>
+      <textarea id="leave-reason" class="border p-2 w-full mt-2" placeholder="Alasan..."></textarea>
+      <div class="flex gap-2 mt-2">
+        <input id="leave-file" type="file" accept="image/*,application/pdf">
+        <button id="btn-submit-leave" class="bg-green-600 text-white px-3 py-2 rounded">Ajukan</button>
+        <div id="leave-msg" class="text-sm text-green-600"></div>
+      </div>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow mt-4">
+      <h3 class="font-semibold">Riwayat Pengajuan</h3>
+      <div id="leaves-list" class="mt-2 space-y-2"></div>
+    </div>
+  </main>
+
+<script src="app.js"></script>
+<script src="leave.js"></script>
+</body>
+</html>
